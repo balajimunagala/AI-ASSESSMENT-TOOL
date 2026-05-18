@@ -13,7 +13,7 @@ export default function DashboardPage() {
 
     const fetchAssessments = async () => {
     try {
-        const res = await axios.get("http://localhost:5000/api/tests");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/tests`);
         setAssessments(res.data);
     } catch (err) {
         console.error(err);

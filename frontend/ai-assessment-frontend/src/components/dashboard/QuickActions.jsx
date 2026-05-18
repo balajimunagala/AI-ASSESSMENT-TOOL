@@ -34,7 +34,7 @@ export function QuickActions({ refreshAssessments }) {
 
   const createTest = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/tests/create", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/tests/create`, {
         title: "Two Sum",
         question: "Find two indices whose sum equals target",
         difficulty: "Easy",

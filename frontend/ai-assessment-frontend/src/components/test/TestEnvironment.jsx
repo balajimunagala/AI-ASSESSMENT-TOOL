@@ -18,7 +18,7 @@ export function TestEnvironment({ testId }) {
   useEffect(() => {
     const fetchTest = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/tests/${testId}`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/tests/${testId}`);
         setTest(res.data);
 
         // ✅ set starter code AFTER data comes
@@ -45,7 +45,7 @@ export function TestEnvironment({ testId }) {
     try {
       setIsRunning(true);
   
-      const res = await axios.post("http://localhost:5000/api/submissions", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/submissions`, {
         userId: "balaji",
         name: "Balaji",
         testId: testId,

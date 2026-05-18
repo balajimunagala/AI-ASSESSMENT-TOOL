@@ -16,7 +16,7 @@ export default function LeaderboardPage() {
     const fetchLeaderboard = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/leaderboard/${testId}`
+          `${import.meta.env.VITE_API_URL}/api/leaderboard/${testId}`
         );
   
         setLeaderboard(res.data);
