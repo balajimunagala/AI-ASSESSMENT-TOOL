@@ -75,7 +75,7 @@ export function TestEnvironment({ testId }) {
       <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
         
         {/* LEFT SIDE */}
-        <div className="lg:w-[400px] xl:w-[450px] border-r border-border overflow-y-auto">
+        <div className="lg:w-100 xl:w-112.5 border-r border-border overflow-y-auto">
           {/* ✅ PASS DATA HERE */}
           <QuestionPanel test={test} />
         </div>
